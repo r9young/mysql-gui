@@ -24,12 +24,32 @@
                             >
                                 {{ tab.tableName }}
                             </a>
+                            
                             <span
                                 class="mb-1 mr-2 cursor-pointer text-lg"
                                 (click)="closeTab(i)"
                                 >&times;</span
                             >
                         </li>
+                        <li
+                        *ngFor="let tab of tabs; let i = index"
+                        class="flex items-center text-black"
+                        [ngStyle]="{ 'background-color': selectedTab === i ? 'white' : 'transparent' }"
+                    >
+                        <a
+                            href="#"
+                            (click)="selectTab(i)"
+                            class="inline-block rounded-t-lg p-1 text-xs font-semibold"
+                        >
+                            {{ tab.tableName }}
+                        </a>
+                        
+                        <span
+                            class="mb-1 mr-2 cursor-pointer text-lg"
+                            (click)="closeTab(i)"
+                            >&times;</span
+                        >
+                    </li>
                     </ul>
                 </div>
             </div>

@@ -6,6 +6,10 @@ import { HomeComponent } from '@pages/home/home.component';
 import { newTabData, openAIEvent } from '@lib/utils/storage/storage.types';
 import * as e from 'express';
 
+
+// The LayoutHorizontalComponent class in TypeScript defines the behavior 
+// and structure for the horizontal layout of the page in an Angular application. 
+
 @Component({
     selector: 'app-layout-horizontal',
     standalone: true,
@@ -29,3 +33,6 @@ export class LayoutHorizontalComponent {
         this.openAIEnabledFlag = event;
     }
 }
+
+
+
