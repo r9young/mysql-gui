@@ -330,6 +330,8 @@ export class HomeComponent implements OnInit, OnChanges, AfterViewInit, AfterVie
         return (sizeInBytes / (1024 * 1024 * 1024)).toFixed(2) + ' GB';
     }
 
+    //issue - there is an extra cross when I open a new window need to be removed
+
     handleNewQueryClick() {
         // Logic to create a new query
         console.log("New Query button clicked");
@@ -347,3 +349,4 @@ export class HomeComponent implements OnInit, OnChanges, AfterViewInit, AfterVie
         this.selectTab(newTabIndex);
     }
 }
+
