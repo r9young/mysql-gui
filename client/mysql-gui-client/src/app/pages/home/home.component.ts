@@ -334,5 +334,16 @@ export class HomeComponent implements OnInit, OnChanges, AfterViewInit, AfterVie
         // Logic to create a new query
         console.log("New Query button clicked");
         // You can add more logic here to open a new query editor or reset the current editor
+
+        const newTab = {
+            id: `tab-${this.tabs.length + 1}`,
+            dbName: '', // Set the default database name if needed
+            query: '' // Set the default query if needed
+        };
+
+        this.tabs.push(newTab);
+        this.tabContent.push(''); // Initialize the content for the new tab
+        const newTabIndex = this.tabs.length - 1;
+        this.selectTab(newTabIndex);
     }
 }
