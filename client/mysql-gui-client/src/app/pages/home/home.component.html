@@ -14,7 +14,7 @@
                     >
                         <li
                             *ngFor="let tab of tabs; let i = index"
-                            class="flex items-center text-black"
+                            class="flex items-center text-black border border-gray-300"
                             [ngStyle]="{ 'background-color': selectedTab === i ? 'white' : 'transparent' }"
                         >
                             <a
@@ -31,24 +31,27 @@
                                 >&times;</span
                             >
                         </li>
+
                         <li
                         *ngFor="let tab of tabs; let i = index"
-                        class="flex items-center text-black"
+                        class="flex items-center text-black border border-gray-300"
                         [ngStyle]="{ 'background-color': selectedTab === i ? 'white' : 'transparent' }"
+                    >
+                    
+                    </li>
+                    <li
+                    *ngFor="let tab of tabs; let i = index"
+                    class="flex items-center text-black border border-gray-300"
+                    [ngStyle]="{ 'background-color': selectedTab === i ? 'white' : 'transparent' }"
                     >
                         <a
                             href="#"
-                            (click)="selectTab(i)"
+                            (click)="handleNewQueryClick()"
                             class="inline-block rounded-t-lg p-1 text-xs font-semibold"
                         >
-                            {{ tab.tableName }}
+                            <i class="fas fa-plus fa-2x">New Tab</i> 
                         </a>
-                        
-                        <span
-                            class="mb-1 mr-2 cursor-pointer text-lg"
-                            (click)="closeTab(i)"
-                            >&times;</span
-                        >
+                    
                     </li>
                     </ul>
                 </div>

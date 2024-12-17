@@ -329,4 +329,10 @@ export class HomeComponent implements OnInit, OnChanges, AfterViewInit, AfterVie
     convertToGB(sizeInBytes: number): string {
         return (sizeInBytes / (1024 * 1024 * 1024)).toFixed(2) + ' GB';
     }
+
+    handleNewQueryClick() {
+        // Logic to create a new query
+        console.log("New Query button clicked");
+        // You can add more logic here to open a new query editor or reset the current editor
+    }
 }
