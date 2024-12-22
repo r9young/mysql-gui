@@ -23,7 +23,7 @@ export class ResultGridComponent {
     rows: any[] = [];
     isLoading: boolean = false;
     copiedCell: string | null = null;
-    warningMessage: string | null = null;
+    createMessage: string | null = null;
     errorMessage: string | null = null;
     copiedPosition = { left: 0, top: 0 };
     currentPage: number = 1;
@@ -39,7 +39,7 @@ export class ResultGridComponent {
                 this.currentPage = 1;
                 this.executeQuery();
             } else {
-                this.warningMessage = 'dbName or triggerQuery is empty. Please check and try again.';  
+                this.createMessage = 'A new tab has been created. Please enter your query!';  
                 this.isLoading = false;
                 this.rows = [];
                 this.headers = [];
